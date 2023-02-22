@@ -105,7 +105,7 @@ const Sidebar = () => {
                 <Typography variant="h2" color={colors.grey[100]} fontWeight="bold" sx={{
                   m: "10px 0 0 0"
                 }}>Alan Tanaka</Typography>
-                <Typography variant="h5" color={colors.turquoise[200]}>Analista de Dados</Typography>
+                <Typography variant="h5" color={colors.turquoise[200]}>Desenvolvedor Full-Stack</Typography>
               </Box>
             </Box>
           )}
