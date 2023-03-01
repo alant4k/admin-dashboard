@@ -14,6 +14,7 @@ import Bar from "./scenes/bar"
 import Pie from "./scenes/pie"
 import Line from "./scenes/line"
 import Geography from "./scenes/geography"
+import NotFound from "./scenes/NotFound"
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route  path="/pie" element={ <Pie /> } />
               <Route  path="/line" element={ <Line /> } />
               <Route  path="/geography" element={ <Geography /> } />
+              <Route  path="*" element={ <NotFound /> } />
       
             </Routes>
           </main>

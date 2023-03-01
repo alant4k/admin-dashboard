@@ -45,6 +45,9 @@ const Calendar = () => {
     }
   }
 
+  const today = new Date()
+  const twentyDaysLater = new Date(today.getTime() + ((20 * 24 * 60 * 60 * 1000) + (123 * 60 * 1000)));
+
   return (
     <Box m="20px">
       <Header title="AGENDA" subtitle="Agenda interativa" />
@@ -63,7 +66,7 @@ const Calendar = () => {
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.turquoise[500], margin: "10px 0", borderRadius: "2px"
+                  backgroundColor: colors.turquoise[400], margin: "10px 0", borderRadius: "2px"
                 }}
               >
                 <ListItemText
@@ -84,7 +87,18 @@ const Calendar = () => {
           </List>
         </Box>
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box
+        flex="1 1 100%"
+        ml="15px"
+        sx={{
+          "& .fc-list-day th": {
+            backgroundColor: "aqua !important"
+          },
+          "& tr.fc-list-event:hover": {
+            color: "#000 !important"
+          },
+        }}
+        >
           <FullCalendar
             locale={brLocale}
             height="75vh"
@@ -110,8 +124,8 @@ const Calendar = () => {
             eventClick={handleEventClick}
             eventsSet={(ev) => setCurrentEvents(ev)}
             initialEvents={[
-              { id:"2401", title: "All-day event", date: "2023-03-24" },
-              { id:"2408", title: "Timed event", date: new Date(),  }
+              { id:"2401", title: "Deadline", date: twentyDaysLater },
+              { id:"2408", title: "Meeting with team", date: today,  }
             ]}
           />
         </Box>
