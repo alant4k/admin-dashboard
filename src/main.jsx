@@ -6,7 +6,7 @@ import './index.css';
 
 const about = 'Desenvolvido com ❤️ por Alan Tanaka';
 const link = 'https://github.com/alant2031';
-const style = 'color: blue; font-weight: 900; text-decoration: none';
+const style = 'color: blue; font-weight: 900';
 console.log(`%c${about}`, style);
 console.log(`%c${link}`, style);
 
