@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 
 const about = 'Desenvolvido com ❤️ por Alan Tanaka';
-const link = 'https://github.com/alant4k';
+const link = 'https://github.com/alantnk';
 const style = 'color: blue; font-weight: 900';
 console.log(`%c${about}`, style);
 console.log(`%c${link}`, style);
